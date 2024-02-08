@@ -1,7 +1,7 @@
 #!/bin/bash
 
 author=tonyhu87
-# github=https://github.com/tonyhu87/v2ray
+# github=https://github.com/tonyhu87/v2c
 
 # bash fonts colors
 red='\e[31m'
@@ -134,7 +134,7 @@ _wget() {
 load core.sh
 # old sh ver
 is_old_dir=/etc/v2ray/tonyhu87
-is_old_conf=/etc/v2ray/233blog_v2ray_backup.conf
+is_old_conf=/etc/v2ray/tonghu87blog_v2ray_backup.conf
 if [[ -f $is_old_conf && -d $is_old_dir ]]; then
     load old.sh
 fi
