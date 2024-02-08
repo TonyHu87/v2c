@@ -1,6 +1,6 @@
 #!/bin/bash
 
-author=tonyhu87 copy
+author=tonyhu87
 # github=https://github.com/tonyhu87/v2ray
 
 # bash fonts colors
