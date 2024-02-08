@@ -1181,7 +1181,7 @@ get() {
         is_file_str=$2
         [[ ! $is_file_str ]] && is_file_str='.json$'
         # is_all_json=("$(ls $is_conf_dir | egrep $is_file_str)")
-        readarray -t is_all_json <<<"$(ls $is_conf_dir | egrep -i "$is_file_str" | sed '/dynamic-port-.*-link/d' | head -233)" # limit max 233 lines for show.
+        readarray -t is_all_json <<<"$(ls $is_conf_dir | egrep -i "$is_file_str" | sed '/dynamic-port-.*-link/d' | head -200)" # limit max 200 lines for show.
         [[ ! $is_all_json ]] && err "无法找到相关的配置文件: $2"
         [[ ${#is_all_json[@]} -eq 1 ]] && is_config_file=$is_all_json && is_auto_get_config=1
         [[ ! $is_config_file ]] && {
@@ -1282,7 +1282,7 @@ get() {
         *http*)
             is_protocol=http
             net=http
-            json_str='settings:{"timeout": 233}'
+            json_str='settings:{"timeout": 300}'
             ;;
         *socks*)
             is_protocol=socks
@@ -1352,11 +1352,11 @@ get() {
         ;;
     dynamic-port) # create random dynamic port
         if [[ $port -ge 60000 ]]; then
-            is_dynamic_port_end=$(shuf -i $(($port - 2333))-$port -n1)
-            is_dynamic_port_start=$(shuf -i $(($is_dynamic_port_end - 2333))-$is_dynamic_port_end -n1)
+            is_dynamic_port_end=$(shuf -i $(($port - 2324))-$port -n1)
+            is_dynamic_port_start=$(shuf -i $(($is_dynamic_port_end - 2324))-$is_dynamic_port_end -n1)
         else
-            is_dynamic_port_start=$(shuf -i $port-$(($port + 2333)) -n1)
-            is_dynamic_port_end=$(shuf -i $is_dynamic_port_start-$(($is_dynamic_port_start + 2333)) -n1)
+            is_dynamic_port_start=$(shuf -i $port-$(($port + 2324)) -n1)
+            is_dynamic_port_end=$(shuf -i $is_dynamic_port_start-$(($is_dynamic_port_start + 2324)) -n1)
         fi
         is_dynamic_port_range="$is_dynamic_port_start-$is_dynamic_port_end"
         ;;
@@ -1572,7 +1572,7 @@ footer_msg() {
     ####### 要点13脸吗只会改我链接的小人 #######
     unset c n m s b
     msg "------------- END -------------"
-    msg "关注(tg): $(msg_ul https://t.me/tg2333)"
+    msg "关注(tg): $(msg_ul https://t.me/tg2324)"
     msg "文档(doc): $(msg_ul https://tonyhu87.com/$is_core/$is_core-script/)"
     msg "推广(ads): 机场推荐($is_core_name services): $(msg_ul https://g${c}e${n}t${m}j${s}m${b}s.com/)\n"
     ####### 要点13脸吗只会改我链接的小人 #######
