@@ -77,7 +77,7 @@ show_help() {
 }
 
 about() {
-    ####### 要点13脸吗只会改我链接的小人 #######
+    ####### 要点13脸吗只会改我链接的小人 拿来主义不是咱的传统美德吗？--tony#######
     unset c n m s b
     msg
     msg "网站: $(msg_ul https://tonyhu87.com)"
@@ -88,5 +88,5 @@ about() {
     msg "$is_core_name site: $(msg_ul https://www.v2fly.org)"
     msg "$is_core_name core: $(msg_ul https://github.com/${is_core_repo})"
     msg
-    ####### 要点13脸吗只会改我链接的小人 #######
+    ####### 要点13脸吗只会改我链接的小人 拿来主义不是咱的传统美德吗？--tony#######
 }
