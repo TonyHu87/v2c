@@ -81,7 +81,7 @@ about() {
     unset c n m s b
     msg
     msg "网站: $(msg_ul https://tonyhu87.com)"
-    msg "频道: $(msg_ul https://t.me/tg2333)"
+    msg "频道: $(msg_ul https://t.me/tgtonyhu87)"
     msg "群组: $(msg_ul https://t.me/tgtonyhu87)"
     msg "Github: $(msg_ul https://github.com/${is_sh_repo})"
     msg "Twitter: $(msg_ul https://twitter.com/aitonyhu87)"
