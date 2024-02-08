@@ -38,7 +38,7 @@ is_old_list=(
 del_old_file() {
 	# old sh bin
 	_v2ray_sh="/usr/local/sbin/v2ray"
-	rm -rf $_v2ray_sh $is_old_conf $is_old_dir $is_core_dir/233blog_v2ray_config.json /usr/bin/v2ray
+	rm -rf $_v2ray_sh $is_old_conf $is_old_dir $is_core_dir/tonghu87blog_v2ray_config.json /usr/bin/v2ray
 	# del alias
 	sed -i "#$_v2ray_sh#d" /root/.bashrc
 	exit
@@ -90,8 +90,8 @@ if [[ $is_old_use ]]; then
 	if [[ $caddy ]]; then
 		get install-caddy
 		# bak caddy files
-		mv -f $is_caddyfile $is_caddyfile.233.bak
-		mv -f $is_caddy_dir/sites $is_caddy_dir/sites.233.bak
+		mv -f $is_caddyfile $is_caddyfile.tonghu87.bak
+		mv -f $is_caddy_dir/sites $is_caddy_dir/sites.tonghu87.bak
 		load caddy.sh
 		caddy_config new
 	fi
